@@ -1,16 +1,19 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import './App.css'
-import Home from './containers/Home/Home'
-import Layout from './hoc/Layout/Layout'
+import logo from './logo.svg'
+import classes from './App.module.css'
 
-function App() {
+const App = () => {
   return (
-    <Layout>
-      <Switch>
-        <Route path="/" component={Home} />
-      </Switch>
-    </Layout>
+    <div className={classes.App}>
+      <header className={classes.AppHeader}>
+        <img src={logo} className={classes.AppLogo} alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a className={classes.AppLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Learn React
+        </a>
+      </header>
+    </div>
   )
 }
 
