@@ -1,0 +1,38 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  width: 180px;
+  cursor: pointer;
+}
+
+.navlinks {
+  list-style: none;
+}
+
+.navlinks li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.navlinks li a {
+  transition: all 0.3s ease 0s;
+  color: rgba(2, 2, 112, 1);
+  font-weight: 400;
+}
+
+.navlinks li a:hover {
+  color: #008899;
+}
+
+button.started {
+  background-color: #9fcc3b;
+}
+
+button.signin {
+  background-color: #6cc4d4;
+}
