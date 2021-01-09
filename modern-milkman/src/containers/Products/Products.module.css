@@ -1,7 +1,13 @@
-.Container {
+.CategoryList {
   width: 25%;
   max-width: 200px;
   min-width: 180px;
   padding: 10px 15px;
   float: left;
+}
+
+.ProductList {
+  padding: 5px 25px;
+  float: left;
+  width: 75%;
 }

@@ -1,0 +1,11 @@
+.ProductListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-flow: wrap;
+}
+
+.ProductItem {
+  margin-right: 30px;
+  margin-bottom: 40px;
+}

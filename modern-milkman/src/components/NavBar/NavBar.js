@@ -1,5 +1,5 @@
-import classes from './Navbar.module.css'
 import React from 'react'
+import classes from './Navbar.module.css'
 import logo from '../../assets/images/MMLogo.svg'
 
 const NavBar = () => {

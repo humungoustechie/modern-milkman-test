@@ -1,0 +1,25 @@
+.ProductListItem {
+  text-align: center;
+  align-content: center;
+  padding: 15px;
+}
+
+.ProductTitle {
+  font-size: 20px;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  max-width: 180px;
+  font-style: italic;
+  color: rgba(2, 2, 112, 1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ProductPrice {
+  font-size: 18px;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  max-width: 180px;
+  color: rgba(2, 2, 112, 1);
+  margin-bottom: 15px;
+}

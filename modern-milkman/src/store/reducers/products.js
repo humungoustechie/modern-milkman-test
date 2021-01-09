@@ -4,7 +4,8 @@ const initialState = {
   products: [],
   loading: false,
   categories: [],
-  selectedCategory: 'Milkshakes',
+  selectedCategory: '',
+  selectedCategoryData: [],
 }
 
 const reducer = (state = initialState, action) => {
@@ -18,6 +19,11 @@ const reducer = (state = initialState, action) => {
       })
 
       return { ...state, loading: false, products: action.payload.products, categories: categories }
+    }
+    case actionTypes.SELECT_PRODUCT_CATEGORY: {
+      const selectedCategory = state.products.find((product) => product.title === action.payload.category)
+      console.log(selectedCategory)
+      return { ...state, selectedCategory: action.payload.category, selectedCategoryData: selectedCategory.data }
     }
     default: {
       return state

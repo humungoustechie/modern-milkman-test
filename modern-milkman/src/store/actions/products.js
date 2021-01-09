@@ -1,5 +1,6 @@
-import axios from '../../data/axios-products'
 import * as actionTypes from './actionTypes'
+
+import axios from '../../data/axios-products'
 
 export const setProductsLoading = () => {
   return {
@@ -27,5 +28,12 @@ export const loadProducts = () => {
       .catch((error) => {
         console.log(error)
       })
+  }
+}
+
+export const selectProductCategory = (category) => {
+  return {
+    type: actionTypes.SELECT_PRODUCT_CATEGORY,
+    payload: { category: category },
   }
 }

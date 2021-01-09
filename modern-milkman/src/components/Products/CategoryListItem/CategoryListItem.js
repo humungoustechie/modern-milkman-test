@@ -1,5 +1,5 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 import classes from './CategoryListItem.module.css'
 
 const CategoryListItem = (props) => {
@@ -9,14 +9,14 @@ const CategoryListItem = (props) => {
   }
 
   return (
-    <li className={classNames.join(' ')} onClick={() => props.listItemClick(2)}>
+    <li className={classNames.join(' ')} onClick={() => props.listItemClick(props.category)}>
       {props.category}
     </li>
   )
 }
 
 CategoryListItem.propTypes = {
-  category: PropTypes.object.isRequired,
+  category: PropTypes.string.isRequired,
   active: PropTypes.bool,
   listItemClick: PropTypes.func.isRequired,
 }

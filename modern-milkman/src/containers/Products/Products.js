@@ -1,10 +1,12 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { connect } from 'react-redux'
-import CategoryList from '../../components/Products/CategoryList/CategoryList'
 import * as actions from '../../store/actions/products'
+
+import CategoryList from '../../components/Products/CategoryList/CategoryList'
 import ContainerLayout from '../ContainerLayout/ContainerLayout'
+import ProductList from '../../components/Products/ProductList/ProductList'
+import React from 'react'
 import classes from './Products.module.css'
+import { connect } from 'react-redux'
+import { useEffect } from 'react'
 
 const Products = (props) => {
   useEffect(() => {
@@ -13,9 +15,8 @@ const Products = (props) => {
 
   return (
     <ContainerLayout heading="Our Products">
-      <div className={classes.Container}>
-        <CategoryList categories={props.categories} selectedCategory={props.selectedCategory} />
-      </div>
+      <CategoryList className={classes.CategoryList} />
+      <ProductList className={classes.ProductList} />
     </ContainerLayout>
   )
 }

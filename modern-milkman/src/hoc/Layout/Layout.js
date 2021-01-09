@@ -1,7 +1,6 @@
-import React from 'react'
-
-import NavBar from '../../components/NavBar/NavBar'
 import Aux from '../Auxiliary/Auxiliary'
+import NavBar from '../../components/NavBar/NavBar'
+import React from 'react'
 import classes from './Layout.module.css'
 
 const Layout = (props) => {

@@ -1,3 +1,22 @@
 .Content {
-  padding: 20px 20%;
+  padding: 20px 15%;
+  background-color: #dddddd;
+}
+
+@media (max-width: 1000px) {
+  .Content {
+    padding: 20px 15%;
+  }
+}
+
+@media (max-width: 750px) {
+  .Content {
+    padding: 20px 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Content {
+    padding: 20px 5%;
+  }
 }

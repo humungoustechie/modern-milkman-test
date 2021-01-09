@@ -1,32 +1,45 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classes from './CategoryList.module.css'
+import * as actions from '../../../store/actions/products'
+
 import CategoryListItem from '../CategoryListItem/CategoryListItem'
+import React from 'react'
+import classes from './CategoryList.module.css'
+import { connect } from 'react-redux'
 
 const CategoryList = (props) => {
   const listItemClicked = (id) => {
     console.log(id)
+    props.selectCategory(id)
   }
 
   return (
-    <ul className={classes.NavLinks}>
-      {props.categories.map((category) => {
-        return (
-          <CategoryListItem
-            key={category}
-            category={category}
-            listItemClick={listItemClicked}
-            active={category === props.selectedCategory}
-          />
-        )
-      })}
-    </ul>
+    <div className={props.className}>
+      <ul className={classes.NavLinks}>
+        {props.categories.map((category) => {
+          return (
+            <CategoryListItem
+              key={category}
+              category={category}
+              listItemClick={listItemClicked}
+              active={category === props.selectedCategory}
+            />
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 
-CategoryList.propTypes = {
-  categories: PropTypes.array.isRequired,
-  selectedCategory: PropTypes.string.isRequired,
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categories,
+    selectedCategory: state.selectedCategory,
+  }
 }
 
-export default CategoryList
+const mapDispatchToProps = (dispatch) => {
+  return {
+    selectCategory: (category) => dispatch(actions.selectProductCategory(category)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryList)
